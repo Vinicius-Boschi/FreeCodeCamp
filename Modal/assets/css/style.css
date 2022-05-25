@@ -22,8 +22,11 @@ body {
 }
 
 .hero {
+    display: grid;
+    place-items: center;
+    min-height: 50vh;
+    min-width: 60vh;
     background-color: white;
-    width: 35%;
     padding: 1rem;
     text-align: center;
     border-radius: 1.5rem;
