@@ -24,7 +24,7 @@ h2 {
 .img-container {
     display: inline-block;
     width: 150px;
-    height: 150px;
+    height: 150px;  
 }
 
 img {
@@ -66,4 +66,10 @@ img {
     color: #FFFFFF;
     background-color: #000000;
     transition: 1s;
+}
+
+@media screen and (max-width: 920px) {
+    .container {
+        width: auto;
+    }
 }
