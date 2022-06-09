@@ -108,3 +108,9 @@ header::after {
 .slide .switch {
     left: 50%;
 }
+
+@media screen and (max-width: 500px) {
+    .title {
+        font-size: 3rem;
+    }
+}
