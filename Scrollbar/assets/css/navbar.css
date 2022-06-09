@@ -1,0 +1,140 @@
+nav {
+    background-color: blue;
+    padding: 1rem 1.5rem;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-toggle {
+    font-size: 1.5rem;
+    color: gray;
+    background: transparent;
+    border-color: transparent;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    background-color: #d1d1d1;
+    border-radius: 5px;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: black;
+}
+
+.fixed-nav .links a {
+    color: gray;
+}
+
+.fixed-nav .links a:hover {
+    color: #b22c2c;
+}
+
+.logo {
+    height: 50px;
+}
+
+.links-container {
+    height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.show-links {
+    height: 200px;
+}
+
+.links a {
+    display: block;
+    background-color: white;
+    color: #80808085;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: 1rem;
+    transition: 1s;
+    font-weight: bold;
+    padding: .75 rem 0;
+}
+
+.links a:hover {
+    background-color: gray;
+}
+
+.top-link {
+    display: grid;
+    font-size: 1.25rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background: lightblue;
+    width: 2rem;
+    height: 2rem;
+    place-items: center;
+    border-radius: 5px;
+    color: white;
+    visibility: hidden;
+    z-index: -100;
+}
+
+.show-link {
+    visibility: visible;
+    z-index: 100;
+}
+
+@media screen and (min-width: 800px) {
+    nav {
+        background: transparent;
+    }
+
+    .nav-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90vw;
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+
+    .nav-header {
+        padding: 0;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .links-container {
+        height: auto;
+    }
+
+    .links {
+        display: flex;
+    }
+
+    .links a {
+        display: block;
+        background: transparent;
+        color: rgb(19, 18, 18);
+        font-size: 1.1rem;
+        text-transform: capitalize;
+        letter-spacing: 1rem;
+        transition: 1s;
+        margin: 0 1rem;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .links a:hover {
+        color: white;
+    }
+}

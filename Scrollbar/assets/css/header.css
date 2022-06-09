@@ -1,0 +1,24 @@
+header {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.conatiner h1 {
+    color: white;
+    text-transform: uppercase;
+}
+
+.container p {
+    color: white;
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .container p {
+        max-width: 40rem;
+    }
+}
