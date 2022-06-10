@@ -1,5 +1,5 @@
 nav {
-    background-color: blue;
+    background-color: var(--clr-white);
     padding: 1rem 1.5rem;
 }
 
@@ -11,16 +11,15 @@ nav {
 
 .nav-toggle {
     font-size: 1.5rem;
-    color: gray;
+    color: var(--clr-grey-1);
     background: transparent;
     border-color: transparent;
-    transition: 1s;
+    transition: var(--transition);
     cursor: pointer;
 }
 
 .nav-toggle:hover {
-    background-color: #d1d1d1;
-    border-radius: 5px;
+    background-color: var(--clr-secondary);
 }
 
 .fixed-nav {
@@ -28,16 +27,16 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: white;
-    box-shadow: black;
+    background-color: var(--clr-white);
+    box-shadow: var(--light-shadow);
 }
 
 .fixed-nav .links a {
-    color: gray;
+    color: var(--clr-grey-1);
 }
 
 .fixed-nav .links a:hover {
-    color: #b22c2c;
+    color: var(--clr-secondary);
 }
 
 .logo {
@@ -47,7 +46,7 @@ nav {
 .links-container {
     height: 0;
     overflow: hidden;
-    transition: 1s;
+    transition: var(--transition);
 }
 
 .show-links {
@@ -55,19 +54,34 @@ nav {
 }
 
 .links a {
-    display: block;
-    background-color: white;
-    color: #80808085;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    padding: 1rem 1rem;
     font-size: 1.1rem;
     text-transform: capitalize;
-    letter-spacing: 1rem;
-    transition: 1s;
-    font-weight: bold;
-    padding: .75 rem 0;
+    letter-spacing: var(--spacing);
+    transition: var(--transition);
+    font-weight: bold; 
+    color: var(--clr-grey-2);   
 }
 
-.links a:hover {
-    background-color: gray;
+.links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--clr-secondary);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .top-link {
@@ -76,12 +90,12 @@ nav {
     position: fixed;
     bottom: 3rem;
     right: 3rem;
-    background: lightblue;
-    width: 2rem;
-    height: 2rem;
+    background: var(--clr-secondary);
+    width: 3rem;
+    height: 3rem;
     place-items: center;
-    border-radius: 5px;
-    color: white;
+    border-radius: var(--radius);
+    color: var(--clr-white);
     visibility: hidden;
     z-index: -100;
 }
@@ -99,7 +113,7 @@ nav {
     .nav-center {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         width: 90vw;
         max-width: 1170px;
         margin: 0 auto;
@@ -124,17 +138,13 @@ nav {
     .links a {
         display: block;
         background: transparent;
-        color: rgb(19, 18, 18);
+        color: var(--clr-white);
         font-size: 1.1rem;
         text-transform: capitalize;
-        letter-spacing: 1rem;
-        transition: 1s;
+        letter-spacing: var(--spacing);
+        transition: var(--transition);
         margin: 0 1rem;
         font-weight: bold;
-        padding: 0;
-    }
-
-    .links a:hover {
-        color: white;
+        padding: 0; 
     }
 }
